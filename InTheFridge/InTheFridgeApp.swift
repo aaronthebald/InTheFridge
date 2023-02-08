@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct InTheFridgeApp: App {
+    
+    @StateObject private var vm = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabViewConcept1()
+                .environmentObject(vm)
         }
     }
 }
