@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabViewConcept1: View {
-    @StateObject var vm: ViewModel = ViewModel()
+    @EnvironmentObject var vm: ViewModel
     @State var sheetIsToggled: Bool = false
     var body: some View {
         TabView {

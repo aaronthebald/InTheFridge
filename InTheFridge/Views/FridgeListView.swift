@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FridgeListView: View {
     
-    @StateObject var vm: ViewModel = ViewModel()
+    @EnvironmentObject var vm: ViewModel
     
     var body: some View {
         ZStack {
@@ -24,7 +24,9 @@ struct FridgeListView: View {
                     
                 }
                 List {
-                    ForEach(vm.fridgeList) { item in
+                    ForEach(vm.foodList.filter({ item in
+                        item.location.contains("Fridge")
+                    })) { item in
                         HStack {
                             Text(item.name)
                             Spacer()
@@ -34,6 +36,7 @@ struct FridgeListView: View {
                         }
                         .foregroundColor(item.inventory > 3 ? Color.primary : Color.red)
                     }
+                    .onDelete(perform: vm.deleteFood)
                 }
             }
         }

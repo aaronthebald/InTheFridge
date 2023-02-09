@@ -10,40 +10,39 @@ import Foundation
 class ViewModel: ObservableObject {
     
     @Published var foodList: [FoodModel] = []
-    @Published var freezerList: [FoodModel] = []
-    @Published var pantryList: [FoodModel] = []
-    @Published var fridgeList: [FoodModel] = []
-    @Published var shoppingList: [FoodModel] = []
+//    @Published var freezerList: [FoodModel] = []
+//    @Published var pantryList: [FoodModel] = []
+//    @Published var fridgeList: [FoodModel] = []
+//    @Published var shoppingList: [FoodModel] = []
     
     init() {
         loadStaples()
-        updateLists()
+      //  updateLists()
     }
     
-    func updateFreezerList() {
-        freezerList = foodList.filter({ FoodModel -> Bool in
-            FoodModel.location.contains("Freezer")
-        })
-    }
-    
-    func updatePantryList() {
-        pantryList = foodList.filter({ FoodModel -> Bool in
-            FoodModel.location.contains("Pantry")
-        })
-    }
-    
-    func updateFridgeList() {
-        fridgeList = foodList.filter({ FoodModel -> Bool in
-            FoodModel.location.contains("Fridge")
-        })
-    }
-    
-    func updateShoppingList() {
-        shoppingList = foodList.filter({ FoodModel -> Bool in
-            FoodModel.inventory.isMultiple(of: 1)
-//            FoodModel.inventory.isLess(than: 3)
-        })
-    }
+//    func updateFreezerList() {
+//        freezerList = foodList.filter({ FoodModel -> Bool in
+//            FoodModel.location.contains("Freezer")
+//        })
+//    }
+//
+//    func updatePantryList() {
+//        pantryList = foodList.filter({ FoodModel -> Bool in
+//            FoodModel.location.contains("Pantry")
+//        })
+//    }
+//
+//    func updateFridgeList() {
+//        fridgeList = foodList.filter({ FoodModel -> Bool in
+//            FoodModel.location.contains("Fridge")
+//        })
+//    }
+//
+//    func updateShoppingList() {
+//        shoppingList = foodList.filter({ FoodModel -> Bool in
+//            FoodModel.inventory < 3
+//        })
+//    }
     
     
     func loadStaples() {
@@ -60,11 +59,15 @@ class ViewModel: ObservableObject {
        // updateLists()
     }
     
-    func updateLists() {
-        updateFridgeList()
-        updateShoppingList()
-        updateFreezerList()
-        updatePantryList()
+    func deleteFood(indexSet: IndexSet) {
+        foodList.remove(atOffsets: indexSet)
     }
+    
+//    func updateLists() {
+//        updateFridgeList()
+//        updateShoppingList()
+//        updateFreezerList()
+//        updatePantryList()
+//    }
 
 }

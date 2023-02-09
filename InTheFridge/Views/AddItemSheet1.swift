@@ -43,7 +43,7 @@ struct AddItemSheet1: View {
     
     func saveItem() {
         vm.addFood(id: UUID().uuidString, location: foodItemLocations, name: textFieldText, inventory: foodItemCount, shopForMore: false, expirationDate: nil)
-        vm.updateLists()
+       // vm.updateLists()
         presentationMode.wrappedValue.dismiss()
     }
     

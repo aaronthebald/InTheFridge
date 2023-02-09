@@ -10,7 +10,6 @@ import SwiftUI
 struct ShoppingListView: View {
     
     @EnvironmentObject private var vm: ViewModel
-    
     var body: some View {
         ZStack {
             
@@ -34,10 +33,15 @@ struct ShoppingListView_Previews: PreviewProvider {
 }
 
 extension ShoppingListView {
+    
+        
+    
     private var row: some View {
         
         List {
-            ForEach(vm.shoppingList) { item in
+            ForEach(vm.foodList.filter({ item in
+                item.inventory < 3
+            })) { item in
                 HStack {
                     Text(item.name)
                     Spacer()
@@ -48,6 +52,7 @@ extension ShoppingListView {
                 .foregroundColor(item.inventory > 3 ? Color.primary : Color.red)
 
             }
+            .onDelete(perform: vm.deleteFood)
         }
         
     }
