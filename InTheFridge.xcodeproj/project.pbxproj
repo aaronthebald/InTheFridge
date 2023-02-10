@@ -12,15 +12,11 @@
 		02545AAD298B21070006FD0F /* FreezerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02545AAC298B21070006FD0F /* FreezerListView.swift */; };
 		02545AAF298B22560006FD0F /* FridgeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02545AAE298B22560006FD0F /* FridgeListView.swift */; };
 		02545AB1298B22D90006FD0F /* PantryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02545AB0298B22D90006FD0F /* PantryListView.swift */; };
-		02545AB3298B28120006FD0F /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02545AB2298B28120006FD0F /* HomeScreenView.swift */; };
 		029AA8B529870D82003F4EB9 /* InTheFridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AA8B429870D82003F4EB9 /* InTheFridgeApp.swift */; };
-		029AA8B729870D82003F4EB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AA8B629870D82003F4EB9 /* ContentView.swift */; };
 		029AA8B929870D83003F4EB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029AA8B829870D83003F4EB9 /* Assets.xcassets */; };
 		029AA8BC29870D83003F4EB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029AA8BB29870D83003F4EB9 /* Preview Assets.xcassets */; };
 		029AA8C329870E41003F4EB9 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AA8C229870E41003F4EB9 /* FoodModel.swift */; };
-		029AA8C62987164B003F4EB9 /* FoodIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AA8C52987164B003F4EB9 /* FoodIcon.swift */; };
 		029AA8C829871FF4003F4EB9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AA8C729871FF4003F4EB9 /* ViewModel.swift */; };
-		029AA8CA29872F47003F4EB9 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AA8C929872F47003F4EB9 /* SectionView.swift */; };
 		029AA8CC2989E584003F4EB9 /* TabViewConcept1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AA8CB2989E584003F4EB9 /* TabViewConcept1.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,16 +26,12 @@
 		02545AAC298B21070006FD0F /* FreezerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerListView.swift; sourceTree = "<group>"; };
 		02545AAE298B22560006FD0F /* FridgeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeListView.swift; sourceTree = "<group>"; };
 		02545AB0298B22D90006FD0F /* PantryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryListView.swift; sourceTree = "<group>"; };
-		02545AB2298B28120006FD0F /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		029AA8B129870D82003F4EB9 /* InTheFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InTheFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		029AA8B429870D82003F4EB9 /* InTheFridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTheFridgeApp.swift; sourceTree = "<group>"; };
-		029AA8B629870D82003F4EB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		029AA8B829870D83003F4EB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		029AA8BB29870D83003F4EB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		029AA8C229870E41003F4EB9 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
-		029AA8C52987164B003F4EB9 /* FoodIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodIcon.swift; sourceTree = "<group>"; };
 		029AA8C729871FF4003F4EB9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		029AA8C929872F47003F4EB9 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		029AA8CB2989E584003F4EB9 /* TabViewConcept1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewConcept1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,10 +86,6 @@
 		029AA8C42987163D003F4EB9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				029AA8B629870D82003F4EB9 /* ContentView.swift */,
-				029AA8C52987164B003F4EB9 /* FoodIcon.swift */,
-				029AA8C929872F47003F4EB9 /* SectionView.swift */,
-				02545AB2298B28120006FD0F /* HomeScreenView.swift */,
 				029AA8CB2989E584003F4EB9 /* TabViewConcept1.swift */,
 				02545AA8298B06C80006FD0F /* ShoppingListView.swift */,
 				02545AAE298B22560006FD0F /* FridgeListView.swift */,
@@ -184,12 +172,8 @@
 				02545AAB298B0B190006FD0F /* AddItemSheet1.swift in Sources */,
 				02545AB1298B22D90006FD0F /* PantryListView.swift in Sources */,
 				029AA8C829871FF4003F4EB9 /* ViewModel.swift in Sources */,
-				029AA8CA29872F47003F4EB9 /* SectionView.swift in Sources */,
 				029AA8C329870E41003F4EB9 /* FoodModel.swift in Sources */,
 				02545AAD298B21070006FD0F /* FreezerListView.swift in Sources */,
-				029AA8B729870D82003F4EB9 /* ContentView.swift in Sources */,
-				02545AB3298B28120006FD0F /* HomeScreenView.swift in Sources */,
-				029AA8C62987164B003F4EB9 /* FoodIcon.swift in Sources */,
 				029AA8B529870D82003F4EB9 /* InTheFridgeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

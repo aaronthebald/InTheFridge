@@ -15,7 +15,7 @@ struct TabViewConcept1: View {
             Button("Click here to get started!", action: {
                 sheetIsToggled.toggle()
             }).sheet(isPresented: $sheetIsToggled, content: {
-                AddItemSheet1()
+                AddItemSheet1().presentationDetents([.medium]).presentationDragIndicator(.visible)
             })
             .tabItem {
                         Image(systemName: "house.fill")

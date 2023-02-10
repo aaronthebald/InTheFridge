@@ -9,20 +9,38 @@ import SwiftUI
 
 struct ShoppingListView: View {
     
-    @EnvironmentObject private var vm: ViewModel
+    @EnvironmentObject var vm: ViewModel
+    @State var sheetIsToggeled: Bool = false
     var body: some View {
         ZStack {
             
             VStack(spacing: 0) {
-                Text("Shopping List")
-                    .font(.largeTitle)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
+                HStack {
+                    Text("Shopping List")
+                        .font(.largeTitle)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding()
                     .background(.thickMaterial)
+                    Spacer()
+                    Image(systemName: "plus.circle")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.accentColor)
+                        .padding()
+                        .padding(5)
+                        .onTapGesture {
+                            sheetIsToggeled.toggle()
+                        }
+                        .sheet(isPresented: $sheetIsToggeled) {
+                            AddItemSheet1().presentationDetents([.medium]).presentationDragIndicator(.visible)
+                        }
+                }
                 row
                 
             }
         }
+        .background(.thinMaterial
+        )
     }
 }
 
@@ -39,9 +57,7 @@ extension ShoppingListView {
     private var row: some View {
         
         List {
-            ForEach(vm.foodList.filter({ item in
-                item.inventory < 3
-            })) { item in
+            ForEach(vm.shoppingList) { item in
                 HStack {
                     Text(item.name)
                     Spacer()
@@ -52,7 +68,7 @@ extension ShoppingListView {
                 .foregroundColor(item.inventory > 3 ? Color.primary : Color.red)
 
             }
-            .onDelete(perform: vm.deleteFood)
+            .onDelete(perform: vm.deleteShoppingFood)
         }
         
     }

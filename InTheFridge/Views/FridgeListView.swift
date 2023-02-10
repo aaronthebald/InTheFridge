@@ -10,23 +10,36 @@ import SwiftUI
 struct FridgeListView: View {
     
     @EnvironmentObject var vm: ViewModel
-    
+    @State var sheetIsToggeled: Bool = false
     var body: some View {
         ZStack {
             
             VStack(spacing: 0) {
                 HStack {
-                    Text("Fridge List")
-                        .font(.largeTitle)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
-                    .background(.thickMaterial)
+                    HStack {
+                        Text("Fridge List")
+                            .font(.largeTitle)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding()
+                        .background(.thickMaterial)
+                        Spacer()
+                        Image(systemName: "plus.circle")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .foregroundColor(.accentColor)
+                            .padding()
+                            .padding(5)
+                            .onTapGesture {
+                                sheetIsToggeled.toggle()
+                            }
+                            .sheet(isPresented: $sheetIsToggeled) {
+                                AddItemSheet1().presentationDetents([.medium]).presentationDragIndicator(.visible)
+                            }
+                    }
                     
                 }
                 List {
-                    ForEach(vm.foodList.filter({ item in
-                        item.location.contains("Fridge")
-                    })) { item in
+                    ForEach(vm.fridgeList) { item in
                         HStack {
                             Text(item.name)
                             Spacer()
@@ -36,10 +49,11 @@ struct FridgeListView: View {
                         }
                         .foregroundColor(item.inventory > 3 ? Color.primary : Color.red)
                     }
-                    .onDelete(perform: vm.deleteFood)
+                    .onDelete(perform: vm.deleteFridgeFood)
                 }
             }
         }
+        .background(.thinMaterial)
 
     }
 }
